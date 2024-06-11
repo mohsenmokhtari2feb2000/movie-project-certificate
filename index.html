@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Fonts -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Lilita+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+    </style>
+    <!-- bootStrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/homePage.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./photos/quaid-lagan-wSkfttEaBw8-unsplash.jpg" />
+      <nav>
+        <div><h1>iMovie</h1></div>
+        <div>
+          <form><input type="text" placeholder="Find Movies & TVs" /></form>
+        </div>
+        <div>
+          <a href="">Free Movies & TV</a><a href="">Cinema</a
+          ><a href="">Sign In</a><a href="">Sign Up</a>
+        </div>
+      </nav>
+      <section class="hero-container">
+        <div class="hero container">
+          <p class="fs-c fw-bold text-white free-movie">
+            Free Movies to Watch, Anytime Anywhere.
+          </p>
+          <p class="fs-5 text-white">
+            The search is over! Let iMovie help you find the perfect movie to
+            watch tonight for free.
+          </p>
+          <button class="sign-in-close-btn">Close</button>
+
+          <button class="sign-in-btn">Watch Free</button>
+
+          <div class="login-pop container-fluid row">
+            <div class="col-6 left-of-login">
+              <img src="./photos/tech-daily-PGuCnUzsRSM-unsplash.jpg" />
+            </div>
+            <div class="col-6 p-4">
+              <form class="p-3 form row">
+                <p class="display-4 fw-bold text-white col-3 m-2">
+                  Account Sign in
+                </p>
+                <input
+                  type="email"
+                  name=""
+                  id="email"
+                  placeholder="Email"
+                  class="col-3 px-3 mt-3 input-c"
+                />
+                <input
+                  type="text"
+                  name=""
+                  id="password"
+                  placeholder="Password"
+                  class="col-3 px-3 mt-3 input-c"
+                />
+                <div class="p-1 mt-2">
+                  <button class="p-2 col-3 mt-3 me-4">Sign In</button
+                  ><button class="p-2 col-3 mt-3 ms-4 bg-success">
+                    Sign Up
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- new hero -->
+        <div class="container row features">
+          <div class="col-3">
+            <i class="bi bi-globe-americas" style="color: blueviolet;"></i>
+            <p class="features-detail">
+              No other free streaming service delivers more content to and from
+              more countries worldwide.
+            </p>
+          </div>
+          <div class="col-3">
+            <i class="bi bi-film" style="color: orangered;"></i>
+            <p class="features-detail">
+              Choose from movies, shows, sports and music documentaries, AMC
+              series, Live TV and more.
+            </p>
+          </div>
+          <div class="col-3">
+            <i class="bi bi-piggy-bank" style="color: rgb(73, 229, 104);"></i>
+            <p class="features-detail">
+              Welcome to instant gratification at its best. Watch now without
+              any payment or subscription and end the search for free movie
+              websites
+            </p>
+          </div>
+          <div class="col-3">
+            <i class="bi bi-laptop" style="color: rgb(63, 89, 222);"></i>
+            <p class="features-detail">
+              Stream the good stuff from your favorite devices including Apple,
+              Android, Smart TVs and more.
+            </p>
+          </div>
+        </div>
+        <!--start of carousel -->
+        <div class="new-movies">
+          <div class="ctr-accordion">
+            <div class="tab">
+              <img src="./photos/1.jpg" />
+            </div>
+            <div class="tab">
+              <img src="./photos/2.jpg" />
+            </div>
+            <div class="tab">
+              <img src="./photos/3.jpg" />
+            </div>
+            <div class="tab">
+              <img src="./photos/4.jpg" />
+            </div>
+            <div class="tab">
+              <img src="./photos/5.jpg" />
+            </div>
+          </div>
+        </div>
+        <!-- end of carousel -->
+        <!-- start of quotes -->
+        <div class="quotes">
+          <span class="span-in-quotes"
+            >Once Upon a Time in the West: There were three men in her life. One
+            knew her past. One wanted her land.</span
+          >
+        </div>
+      </section>
+    </header>
+    <!-- end of header -->
+    <!-- start of ads -->
+    <section class="serials">
+    </section>
+    <!-- scripts -->
+    <script src="./assets/js/homePage.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
