@@ -70,4 +70,4 @@ const fetch = async () => {
     console.error(error);
   }
 };
-fetch();
+// fetch();
