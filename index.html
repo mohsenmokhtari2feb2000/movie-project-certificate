@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>iMovie</title>
     <!-- axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- Fonts -->
@@ -36,9 +36,10 @@
         <div>
           <form><input type="text" placeholder="Find Movies & TVs" /></form>
         </div>
-        <div>
+        <div class="nav-log">
           <a href="">Free Movies & TV</a><a href="">Cinema</a
-          ><a href="">Sign In</a><a href="">Sign Up</a>
+          ><a href="./signin/log/signin.html" class="logged-in">Sign In</a
+          ><a href="./signin/log/signup.html" class="logged-in">Sign Up</a>
         </div>
       </nav>
       <section class="hero-container">
@@ -52,7 +53,7 @@
           </p>
           <button class="sign-in-close-btn">Close</button>
 
-          <button class="sign-in-btn">Watch Free</button>
+          <button class="sign-in-btn sign-in-btn-anim">Watch Free</button>
 
           <div class="login-pop container-fluid row">
             <div class="col-6 left-of-login">
@@ -64,11 +65,12 @@
                   Account Sign in
                 </p>
                 <input
-                  type="email"
+                  type="tex"
                   name=""
                   id="email"
-                  placeholder="Email"
+                  placeholder="Username"
                   class="col-3 px-3 mt-3 input-c"
+                  required
                 />
                 <input
                   type="text"
@@ -76,12 +78,16 @@
                   id="password"
                   placeholder="Password"
                   class="col-3 px-3 mt-3 input-c"
+                  required
                 />
                 <div class="p-1 mt-2">
-                  <button class="p-2 col-3 mt-3 me-4">Sign In</button
-                  ><button class="p-2 col-3 mt-3 ms-4 bg-success">
+                  <button class="p-2 col-3 mt-3 me-4 button-50">Sign In</button
+                  ><a
+                    href="./signin/log/signup.html"
+                    class="p-2 col-3 mt-3 ms-4 bg-success-c sign-up-btn-in-pop button-50"
+                  >
                     Sign Up
-                  </button>
+                  </a>
                 </div>
               </form>
             </div>
