@@ -6,10 +6,30 @@
     <title>iMovie</title>
     <!-- axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <!-- Fonts -->
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Lilita+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-    </style>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Geologica:wght@100..900&family=Lilita+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+IS:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- bootStrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -25,141 +45,187 @@
     <link rel="stylesheet" href="./assets/css/homePage.css" />
   </head>
   <body>
-    <header>
-      <img src="./photos/quaid-lagan-wSkfttEaBw8-unsplash.jpg" />
-      <!-- <img
-        src="https://images.unsplash.com/photo-1621661513895-4d42157eda74?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      /> -->
+    <!-- <nav>
+      <div><h1>iMovie</h1></div>
 
-      <nav>
-        <div><h1>iMovie</h1></div>
-        <div>
-          <form><input type="text" placeholder="Find Movies & TVs" /></form>
+      <div>
+        <form><input type="text" placeholder="Find Movies & TVs" /></form>
+      </div>
+      <div class="nav-log">
+        <a href="">Free Movies & TV</a><a href="">Cinema</a
+        ><a href="./signin/log/signin.html" class="logged-in">Sign In</a
+        ><a href="./signin/log/signup.html" class="logged-in">Sign Up</a>
+      </div>
+    </nav> -->
+    <!-- !______________________________________________________________________ -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white ms-lg-5 fw-bold" href="#">iMovie</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse d-lg-flex justify-content-lg-evenly"
+          id="navbarNavAltMarkup"
+        >
+          <div class="navbar-nav nav-log">
+            <form
+              class="d-none d-lg-flex position-relative me-lg-6"
+              role="search"
+            >
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <i
+                class="bi bi-search btn position-absolute end-0 text-warning me-2 fs-3 py-0"
+              ></i>
+            </form>
+            <a
+              class="nav-link text-white ms-lg-1 me-lg-3 fw-bold"
+              aria-current="page"
+              href="#"
+              >Free Movies & TV</a
+            >
+            <a class="nav-link ms-lg-1 me-lg-3 fw-bold" href="#">Cinema</a>
+            <a
+              class="nav-link logged-in ms-lg-1"
+              href="./signin/log/signin.html"
+              >Sign In</a
+            >
+            <a
+              class="nav-link logged-in ms-lg-1"
+              href="./signin/log/signup.html"
+              >Sign Up</a
+            >
+          </div>
         </div>
-        <div class="nav-log">
-          <a href="">Free Movies & TV</a><a href="">Cinema</a
-          ><a href="./signin/log/signin.html" class="logged-in">Sign In</a
-          ><a href="./signin/log/signup.html" class="logged-in">Sign Up</a>
-        </div>
-      </nav>
-      <section class="hero-container">
-        <div class="hero container">
-          <p class="fs-c fw-bold text-white free-movie">
-            Free Movies to Watch, Anytime Anywhere.
-          </p>
-          <p class="fs-5 text-white">
-            The search is over! Let iMovie help you find the perfect movie to
-            watch tonight for free.
-          </p>
-          <button class="sign-in-close-btn">Close</button>
+      </div>
+    </nav>
+    <!-- !_____________________________________________________________________ -->
+    <header class="w-100">
+      <div class="hero container hero-container">
+        <p class="fs-c fw-bold text-white free-movie">
+          Free Movies to Watch, Anytime Anywhere.
+        </p>
+        <p class="fs-5 text-white">
+          The search is over! Let iMovie help you find the perfect movie to
+          watch tonight for free.
+        </p>
+        <button class="sign-in-close-btn">Close</button>
 
-          <button class="sign-in-btn sign-in-btn-anim">Watch Free</button>
+        <button class="sign-in-btn sign-in-btn-anim">Watch Free</button>
 
-          <div class="login-pop container-fluid row">
-            <div class="col-6 left-of-login">
-              <img src="./photos/tech-daily-PGuCnUzsRSM-unsplash.jpg" />
-            </div>
-            <div class="col-6 p-4">
-              <form class="p-3 form row">
-                <p class="display-4 fw-bold text-white col-3 m-2">
-                  Account Sign in
-                </p>
-                <input
-                  type="tex"
-                  name=""
-                  id="email"
-                  placeholder="Username"
-                  class="col-3 px-3 mt-3 input-c"
-                  required
-                />
-                <input
-                  type="text"
-                  name=""
-                  id="password"
-                  placeholder="Password"
-                  class="col-3 px-3 mt-3 input-c"
-                  required
-                />
-                <div class="p-1 mt-2">
-                  <button class="p-2 col-3 mt-3 me-4 button-50">Sign In</button
-                  ><a
-                    href="./signin/log/signup.html"
-                    class="p-2 col-3 mt-3 ms-4 bg-success-c sign-up-btn-in-pop button-50"
-                  >
-                    Sign Up
-                  </a>
-                </div>
-              </form>
-            </div>
+        <div class="login-pop container-fluid row">
+          <div class="col-6 left-of-login">
+            <img src="./photos/tech-daily-PGuCnUzsRSM-unsplash.jpg" />
+          </div>
+          <div class="col-6 p-4">
+            <form class="p-3 form row">
+              <p class="display-4 fw-bold text-white col-3 m-2">
+                Account Sign in
+              </p>
+              <input
+                type="tex"
+                name=""
+                id="email"
+                placeholder="Username"
+                class="col-3 px-3 mt-3 input-c"
+                required
+              />
+              <input
+                type="text"
+                name=""
+                id="password"
+                placeholder="Password"
+                class="col-3 px-3 mt-3 input-c"
+                required
+              />
+              <div class="p-1 mt-2">
+                <button class="p-2 col-3 mt-3 me-4 button-50">Sign In</button
+                ><a
+                  href="./signin/log/signup.html"
+                  class="p-2 col-3 mt-3 ms-4 sign-up-btn-in-pop button-50"
+                >
+                  Sign Up
+                </a>
+              </div>
+            </form>
           </div>
         </div>
-        <!-- new hero -->
-        <div class="container row features">
-          <div class="col-3">
-            <i class="bi bi-globe-americas" style="color: blueviolet"></i>
-            <p class="features-detail">
-              No other free streaming service delivers more content to and from
-              more countries worldwide.
-            </p>
-          </div>
-          <div class="col-3">
-            <i class="bi bi-film" style="color: orangered"></i>
-            <p class="features-detail">
-              Choose from movies, shows, sports and music documentaries, AMC
-              series, Live TV and more.
-            </p>
-          </div>
-          <div class="col-3">
-            <i class="bi bi-piggy-bank" style="color: rgb(73, 229, 104)"></i>
-            <p class="features-detail">
-              Welcome to instant gratification at its best. Watch now without
-              any payment or subscription and end the search for free movie
-              websites
-            </p>
-          </div>
-          <div class="col-3">
-            <i class="bi bi-laptop" style="color: rgb(63, 89, 222)"></i>
-            <p class="features-detail">
-              Stream the good stuff from your favorite devices including Apple,
-              Android, Smart TVs and more.
-            </p>
-          </div>
-        </div>
-        <!--start of carousel -->
-        <div class="new-movies">
-          <p class="gallery">Gallery</p>
-          <div class="ctr-accordion">
-            <div class="tab">
-              <img src="./photos/1.jpg" />
-            </div>
-            <div class="tab">
-              <img src="./photos/2.jpg" />
-            </div>
-            <div class="tab">
-              <img src="./photos/3.jpg" />
-            </div>
-            <div class="tab">
-              <img src="./photos/4.jpg" />
-            </div>
-            <div class="tab">
-              <img src="./photos/5.jpg" />
-            </div>
-          </div>
-        </div>
-        <!-- end of carousel -->
-        <!-- start of quotes -->
-        <div class="quotes">
-          <span class="span-in-quotes"
-            >Once Upon a Time in the West: There were three men in her life. One
-            knew her past. One wanted her land.</span
-          >
-        </div>
-      </section>
+      </div>
     </header>
-    <!-- end of header -->
+    <!-- goToTop btn -->
+    <div class="go-to-top"><i class="bi bi-arrow-up-circle"></i></div>
+    <!--start of carousel -->
+    <div class="new-movies">
+      <p class="gallery">Gallery</p>
+      <div class="ctr-accordion">
+        <div class="tab">
+          <img src="./photos/1.jpg" />
+        </div>
+        <div class="tab">
+          <img src="./photos/2.jpg" />
+        </div>
+        <div class="tab">
+          <img src="./photos/3.jpg" />
+        </div>
+        <div class="tab">
+          <img src="./photos/4.jpg" />
+        </div>
+        <div class="tab">
+          <img src="./photos/5.jpg" />
+        </div>
+      </div>
+    </div>
+    <!-- end of carousel -->
+    <!-- new hero -->
+    <div class="container row features w-100">
+      <div class="col-3">
+        <i class="bi bi-globe-americas" style="color: blueviolet"></i>
+        <p class="features-detail">
+          No other free streaming service delivers more content to and from more
+          countries worldwide.
+        </p>
+      </div>
+      <div class="col-3">
+        <i class="bi bi-film" style="color: orangered"></i>
+        <p class="features-detail">
+          Choose from movies, shows, sports and music documentaries, AMC series,
+          Live TV and more.
+        </p>
+      </div>
+      <div class="col-3">
+        <i class="bi bi-piggy-bank" style="color: rgb(73, 229, 104)"></i>
+        <p class="features-detail">
+          Welcome to instant gratification at its best. Watch now without any
+          payment or subscription and end the search for free movie websites
+        </p>
+      </div>
+      <div class="col-3">
+        <i class="bi bi-laptop" style="color: rgb(63, 89, 222)"></i>
+        <p class="features-detail">
+          Stream the good stuff from your favorite devices including Apple,
+          Android, Smart TVs and more.
+        </p>
+      </div>
+    </div>
+
     <main class="special-bg">
       <!-- start of top 10 IMDB -->
-      <p class="text-center display-6 text-white font-c">Top 10 IMDB</p>
+      <p class="text-center display-6 text-white font-c stayMIddle">
+        Top 10 IMDB
+      </p>
       <section class="imdb-wrapper special-bg">
         <div class="imdb-card item1">
           <img
@@ -203,7 +269,9 @@
         </div>
       </section>
       <!-- bottom div -->
-      <p class="text-center display-6 text-white font-c">Top Box Office</p>
+      <p class="text-center display-6 text-white font-c stayMIddle">
+        Top Box Office
+      </p>
       <section class="imdb-wrapper imdb-wrapper-reverse special-bg">
         <div class="imdb-card-reverse item1">
           <img
@@ -251,61 +319,16 @@
         <p class="display-6">Featured Recently</p>
       </section>
       <!-- end of serial cards -->
-      <!-- article -->
-      <article class="">
-        <img src="./photos/article2.jpg" />
-        <h1 class="font-c p-4 fw-bold text-white">Our Mission Statement</h1>
 
-        <div class="inner-div">
-          <h3 class="mt-4 mb-4 display-4">
-            Watching movies serves as a delightful escape from our daily
-            routines. Here are some reasons why
-            <span class="fw-bold">it’s important</span>:
-          </h3>
-          <div class="mt-4-c fs-5">
-            <ol>
-              <li>
-                <span class="fw-bold">Entertainment and Relaxation:</span>
-                Movies provide a break from our busy lives. They transport us to
-                different worlds, allowing us to unwind and forget our worries
-                momentarily.
-              </li>
-              <li>
-                <span class="fw-bold">Cultural Exploration:</span> Films offer
-                glimpses into diverse cultures, traditions, and historical
-                contexts. We learn about people, places, and events beyond our
-                immediate surroundings.
-              </li>
-              <li>
-                <span class="fw-bold">Emotional Connection:</span>
-                Well-crafted movies evoke powerful emotions. Whether it’s
-                laughter, tears, or suspense, these feelings connect us to the
-                characters and their stories.
-              </li>
-              <li>
-                <span class="fw-bold">Artistic Expression:</span>
-                Filmmaking is an art form. Directors, actors, and
-                cinematographers collaborate to create visual masterpieces.
-                Appreciating their creativity enriches our lives.
-              </li>
-              <li>
-                <span class="fw-bold">Social Bonding:</span> Watching movies
-                with friends or family fosters bonding. It provides shared
-                experiences and topics for discussion, strengthening
-                relationships.
-              </li>
-              <li>
-                <span class="fw-bold">Escapism and Inspiration:</span>
-                Movies allow us to escape reality temporarily. They inspire us,
-                spark creativity, and encourage us to dream beyond our
-                limitations.
-              </li>
-            </ol>
-          </div>
-        </div>
-      </article>
-    </main>
-    <footer>
+      <!-- start of quotes -->
+      <div class="quotes">
+        <span class="span-in-quotes"
+          >Once Upon a Time in the West: There were three men in her life. One
+          knew her past. One wanted her land.</span
+        >
+      </div>
+      <!-- partners -->
+
       <section class="partners">
         <h1 class="text-center font-c fw-bold">Proud Partners with:</h1>
         <div class="d-flex p-4">
@@ -332,8 +355,99 @@
           />
         </div>
       </section>
+      <!-- article -->
+      <article class="">
+        <h1 class="font-c p-4 fw-bold text-white">We’re fans at heart.</h1>
+
+        <div class="inner-div">
+          <h3 class="mt-4 mb-1 font-cc text-warning">
+            We’re on a mission to create a global community where everyone can
+            discover, experience, and share all of the entertainment that
+            matters to them.
+          </h3>
+        </div>
+      </article>
+    </main>
+    <!-- start of footer -->
+    <footer class="w-100 special-bg">
+      <div class="container-fluid bg-dark pt-5">
+        <div class="container py-5">
+          <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+              <p class="text-white-50">
+                Need something to watch? We’re on it. Plex combines free movies
+                & TV with your favorite streaming services, so there’s always
+                more to discover.
+              </p>
+              <div class="d-flex gap-4 pt-2 mt-4">
+                <a href="#"><i class="bi bi-twitter-x text-white"></i></a>
+                <a href="#"><i class="bi bi-facebook text-white"></i></a>
+                <a href="#"><i class="bi bi-youtube text-white"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-white"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-3 fw-bold">Contact Us</h5>
+              <p class="text-white-50 mb-4">
+                <span><i class="bi bi-geo-alt-fill"></i></span>United States
+              </p>
+              <p class="text-white-50 mb-4">
+                <span><i class="bi bi-telephone-fill"></i></span>+1 503 671 6453
+              </p>
+              <p class="text-white-50 mb-4">
+                <span><i class="bi bi-envelope"></i></span> example@iMovie.com
+              </p>
+            </div>
+            <div class="col-lg-3 col-md-6 d-flex flex-column gap-2">
+              <h5 class="text-white mb-3">COMPANY</h5>
+              <a href="#" class="text-white-50 link-c"
+                ><span class="me-3">
+                  <i class="bi bi-arrow-right-circle"></i></span
+                >About iMovie</a
+              >
+              <a href="#" class="text-white-50 link-c"
+                ><span class="me-3">
+                  <i class="bi bi-arrow-right-circle"></i></span
+                >News</a
+              >
+              <a href="#" class="text-white-50 link-c"
+                ><span class="me-3">
+                  <i class="bi bi-arrow-right-circle"></i></span
+                >Purpose</a
+              >
+              <a href="#" class="text-white-50 link-c"
+                ><span class="me-3">
+                  <i class="bi bi-arrow-right-circle"></i></span
+                >Get Help</a
+              >
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-3">
+                iMovie, INC. <span class="h1">NEWSROOM</span>
+              </h5>
+              <p class="text-white-50 mb-5">
+                Get the latest news by registering your email.
+              </p>
+              <div class="d-flex align-items-center">
+                <form action="">
+                  <input
+                    type="email"
+                    class="rounded me-2"
+                    style="height: 38px"
+                  />
+                  <button type="submit" class="btn btn-outline-info">
+                    Email
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid"></div>
+      </div>
     </footer>
-    <!-- scripts -->
+    <!--! scripts -->
     <script src="./assets/js/homePage.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

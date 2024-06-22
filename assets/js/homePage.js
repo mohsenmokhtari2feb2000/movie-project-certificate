@@ -9,6 +9,20 @@ const SignUpbtnInPop = document.querySelector(".sign-up-btn-in-pop");
 const formEle = document.querySelector(".form");
 const navLog = document.querySelector(".nav-log");
 let btnInNav = document.querySelectorAll(".logged-in");
+const goToTopBtn = document.querySelector(".go-to-top");
+console.log("hi");
+window.addEventListener("scroll", checkHeight);
+function checkHeight() {
+  if (window.scrollY > 200) {
+    goToTopBtn.style.display = "flex";
+  } else {
+    goToTopBtn.style.display = "none";
+  }
+}
+goToTopBtn.addEventListener("click", (e) => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 // ! whole app
 if (localStorage.getItem("isUserLoggedIn") === "true") {
   signInBtn.classList.add("green-c");
@@ -25,11 +39,11 @@ if (localStorage.getItem("isUserLoggedIn") === "true") {
     e.target.remove();
     // !
     const signInAnchor = document.createElement("a");
-    signInAnchor.classList.add("logged-in");
+    signInAnchor.classList = "logged-in nav-link ms-lg-1";
     signInAnchor.innerText = "Sign In";
     signInAnchor.setAttribute("href", "./signin/log/signin.html");
     const signupAnchor = document.createElement("a");
-    signupAnchor.classList.add("logged-in");
+    signupAnchor.classList = "logged-in nav-link ms-lg-1";
     signupAnchor.innerText = "Sign Up";
     signupAnchor.setAttribute("href", "./signin/log/signup.html");
     navLog.append(signInAnchor, signupAnchor);
@@ -39,8 +53,7 @@ if (localStorage.getItem("isUserLoggedIn") === "true") {
 signInBtn.addEventListener("click", (e) => {
   // localStorage.setItem("isUserLoggedIn", "loggedOut");
   if (localStorage.getItem("isUserLoggedIn") === "true") {
-    alert("you are already logged in");
-    scrollTo(0, 2180);
+    window.scrollTo({ top: 1700, behavior: "smooth" });
   } else {
     e.target.style.translate = "1000px";
     loginPopEle.style.translate = "0";
@@ -81,26 +94,19 @@ setInterval(() => {
 
 const options = {
   method: "GET",
-  url: "https://imdb188.p.rapidapi.com/api/v1/getWeekTop10",
-  headers: {
-    "x-rapidapi-key": "9649235bc3mshdaa9c884b100fedp152d3bjsnc95206886936",
-    "x-rapidapi-host": "imdb188.p.rapidapi.com",
-  },
+  url: "https://api.tvmaze.com/shows",
 };
 
 const fetch = async () => {
   try {
     const response = await axios.request(options);
-    // console.log(response.data.data[0].primaryImage.imageUrl);
+    // console.log(response.data[1]);
     for (let i = 0; i < 5; i++) {
       const cardEle = document.createElement("div");
       cardEle.setAttribute("class", "card");
       serialsEle.append(cardEle);
       const imgELeForCard = document.createElement("img");
-      imgELeForCard.setAttribute(
-        "src",
-        response.data.data[i].primaryImage.imageUrl
-      );
+      imgELeForCard.setAttribute("src", response.data[i].image.medium);
       cardEle.append(imgELeForCard);
       imgELeForCard.classList.add("img-for-cards");
     }
@@ -108,12 +114,11 @@ const fetch = async () => {
     console.error(error);
   }
 };
-// fetch();
+fetch();
 // sign in app
 
 formEle.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.dir(e.target);
   const userName = e.target.children[1].value.trim();
   const passWord = e.target.children[2].value.trim();
   const fetchLogin = async () => {
@@ -147,11 +152,11 @@ formEle.addEventListener("submit", (e) => {
           e.target.remove();
           // !
           const signInAnchor = document.createElement("a");
-          signInAnchor.classList.add("logged-in");
+          signInAnchor.classList = "logged-in nav-link ms-lg-1";
           signInAnchor.innerText = "Sign In";
           signInAnchor.setAttribute("href", "./signin/log/signin.html");
           const signupAnchor = document.createElement("a");
-          signupAnchor.classList.add("logged-in");
+          signupAnchor.classList = "logged-in nav-link ms-lg-1";
           signupAnchor.innerText = "Sign Up";
           signupAnchor.setAttribute("href", "./signin/log/signup.html");
           navLog.append(signInAnchor, signupAnchor);
