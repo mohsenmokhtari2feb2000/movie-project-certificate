@@ -195,7 +195,7 @@ header img {
 .free-movie {
   transition: ease-in-out 2.5s;
   font-family: "Permanent Marker", cursive;
-  color: #f74366 !important;
+  color: #ffffff !important;
 }
 .features {
   width: 100%;
@@ -537,7 +537,7 @@ ol {
 
 /* CSS */
 .log-Out-c {
-  width: 70px;
+  width: 100px;
   height: 30px;
   background-color: transparent;
   margin: 6px;
